@@ -1,21 +1,12 @@
 let img;
+let num = 1;
 function slider(num) {
    img = document.getElementById('slider');
     img.style.cssText = `
     background-image: url(./img/${num}.jpg)
     `
-} 
-
-setInterval(()=>{
-    slider(1)
-}, 5000);
-
-setInterval(()=>{
-    slider(2)
-}, 10000);
-
-setInterval(()=>{
-    slider(3)
-}, 15000);
-
-
+}
+    setInterval(()=>{
+        slider(num);
+        num++;
+    }, 5000);   
